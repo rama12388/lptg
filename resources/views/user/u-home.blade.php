@@ -68,13 +68,13 @@
 </div>
 
 @section('script')
-    <script>    
+    <script>
     var pieChart = document.getElementById('pieChart').getContext('2d');
     var myPieChart = new Chart(pieChart, {
         type: 'pie',
         data: {
             datasets: [{
-                data: [<?php 
+                data: [<?php
                     foreach($datas_kk ?? '' as $data){
                         echo '"'.$data->jumlah_kk.'",';
                     }
@@ -82,14 +82,15 @@
                 backgroundColor :['#c62828', '#AD1457', '#6A1B9A', '#4527A0', '#283593', '#1565C0', '#0277BD', '#00838F', '#00695C', '#2E7D32', '#558B2F', '#9E9D24'],
                 borderWidth: 0
             }],
-            labels: [<?php 
+            labels: [<?php
                     foreach($datas_kk ?? '' as $data){
                         echo '"'.$data->jenis_kk.'",';
                     }
-                    ?>] 
+                    ?>]
+
         },
         options : {
-            responsive: true, 
+            responsive: true,
             maintainAspectRatio: false,
             legend: {
                 position : 'bottom',
@@ -142,7 +143,7 @@
             }]
         },
         options : {
-            responsive: true, 
+            responsive: true,
             maintainAspectRatio: false,
             legend: {
                 display: false
@@ -186,20 +187,20 @@
                     },
                     maxBarThickness: 25,
                 }]
-            }, 
-            legendCallback: function(chart) { 
-                var text = []; 
-                text.push('<ul class="' + chart.id + '-legend html-legend">'); 
-                for (var i = 0; i < chart.data.datasets.length; i++) { 
-                    text.push('<li><span style="background-color:' + chart.data.datasets[i].legendColor + '"></span>'); 
-                    if (chart.data.datasets[i].label) { 
-                        text.push(chart.data.datasets[i].label); 
-                    } 
-                    text.push('</li>'); 
-                } 
-                text.push('</ul>'); 
-                return text.join(''); 
-            }  
+            },
+            legendCallback: function(chart) {
+                var text = [];
+                text.push('<ul class="' + chart.id + '-legend html-legend">');
+                for (var i = 0; i < chart.data.datasets.length; i++) {
+                    text.push('<li><span style="background-color:' + chart.data.datasets[i].legendColor + '"></span>');
+                    if (chart.data.datasets[i].label) {
+                        text.push(chart.data.datasets[i].label);
+                    }
+                    text.push('</li>');
+                }
+                text.push('</ul>');
+                return text.join('');
+            }
         }
     });
 
@@ -215,5 +216,5 @@
         }
     </script>
 @endsection
-  
+
 @endsection

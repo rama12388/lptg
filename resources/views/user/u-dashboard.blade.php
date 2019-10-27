@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Sistem Jurnal Geodesi</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	
+
 	<!-- Fonts and icons -->
 	<script src="{{asset('/assets/js/plugin/webfont/webfont.min.js')}}"></script>
 	<script>
@@ -27,7 +27,7 @@
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="green">
-				
+
 				<a href="{{route('user.home')}}" class="logo">
 					<img src="{{asset('/assets/img/logo.png')}}" alt="navbar brand" class="navbar-brand">
 				</a>
@@ -48,13 +48,11 @@
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="green2">
 				<div class="container-fluid">
-				
+
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-								<div class="avatar-sm">
 									<a href="{{route('login.read')}}"><button type="button" class="navbar-nav topbar-nav btn btn-primary text-section">Login</button></a>
-								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
@@ -62,10 +60,6 @@
 										<div class="user-box">
 											<div class="avatar-lg"><img src="{{asset('assets/img/user.png')}}" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
-											
-												
-												
-												
 											</div>
 										</div>
 									</li>
@@ -79,7 +73,7 @@
 		</div>
 
 		<!-- Sidebar -->
-		<div class="sidebar sidebar-style-2">			
+		<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -91,7 +85,7 @@
 								<span>
 									Teknik Geodesi
 									<span class="user-level">Universitas Diponegoro</span>
-									
+
 								</span>
 							</a>
 							<div class="clearfix"></div>
@@ -153,7 +147,7 @@
 			<div class="content">
 				@yield('content')
 			</div>
-			
+
 			<footer class="footer">
 				<div class="container-fluid">
 					<nav class="pull-left">
@@ -167,12 +161,12 @@
 					</nav>
 					<div class="copyright ml-auto">
 					© 2019 www.lptg.web.id with <i class="fa fa-heart heart text-danger"></i>
-					</div>				
+					</div>
 				</div>
 			</footer>
 		</div>
-		
-		
+
+
 	</div>
 	<!--   Core JS Files   -->
 	<script src="{{asset('/assets/js/core/jquery.3.2.1.min.js')}}"></script>
