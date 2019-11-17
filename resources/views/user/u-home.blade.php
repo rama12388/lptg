@@ -48,8 +48,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="page-inner mt--5">
     <div class="row mt--2">
         <div class="col-md-12">
@@ -76,7 +74,8 @@
             datasets: [{
                 data: [<?php
                     foreach($datas_kk ?? '' as $data){
-                        echo '"'.$data->jumlah_kk.'",';
+                        $float = number_format($data->jumlah_kk, 2);
+                        echo '"'.$float.'",';
                     }
                     ?>],
                 backgroundColor :['#c62828', '#AD1457', '#6A1B9A', '#4527A0', '#283593', '#1565C0', '#0277BD', '#00838F', '#00695C', '#2E7D32', '#558B2F', '#9E9D24'],

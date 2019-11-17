@@ -29,6 +29,7 @@ class UserHomeController extends Controller
             ->select(DB::raw('count(*) as jumlah_kk, jenis_kk'))
             ->groupBy('jenis_kk')
             ->get();
+
         return view('user/u-home', compact('datas_location', 'datas_kk'));
 
 
